@@ -1,0 +1,10 @@
+a {
+  text-shadow: 5px 5px #558ABB;
+}
+
+.content {
+    letter-spacing: 3px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}

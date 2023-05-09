@@ -1,19 +1,31 @@
-const ParagraphLink = ({ href, color, children }) => { // props --> {clave: valor, href: "http"}
+// Connecting stylesheet
+import '../../styles/paragraphLink/paragraph-link.css';
+import PropTypes from 'prop-types'
+
+
+//  Los props comunican los componentes padres con los componentes hijos
+const ParagraphLink = ({ href, color = 'orange', children }) => { // props --> {clave: valor, href: "http"}
   // consolelog(props)
 
   const myParagraph = (<>
     <a
+      className="color-anchor"
+      id="anchor-paragraph"
       style={{ textDecoration: 'none', color: color }}
       href={href}
       target="_blank">
-      <p>{children}</p>
+      <p className="content">{children}</p>
     </a>
   </>
   );
   return myParagraph
 }
 
-export default ParagraphLink;
+ParagraphLink.propTypes = {
+  href: PropTypes.string.isRequired
+}
+
+export default ParagraphLink; // exportacion por default
 
 /*
 * Deestructuracion
